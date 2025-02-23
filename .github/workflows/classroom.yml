@@ -18,8 +18,8 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Setup
-        setup-command: sudo -H pip3 install -qr requirements.txt; sudo -H pip3 install
-          flake8==5.0.4
+        setup-command: sudo -H pip3 install --ignore-installed -qr requirements.txt; sudo -H pip3 install
+          flake8==5.0.4; sudo -H pip3 install mypy
         command: flake8 --ignore "N801, E203, E266, E501, W503, F812, E741, N803,
           N802, N806" minitorch/ tests/ project/; mypy minitorch/*
         timeout: 10
@@ -28,7 +28,7 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Task 0.1
-        setup-command: sudo -H pip3 install -qr requirements.txt
+        setup-command: sudo -H pip3 install --ignore-installed -qr requirements.txt
         command: pytest -m task0_1
         timeout: 10
     - name: Task 0.2
@@ -36,7 +36,7 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Task 0.2
-        setup-command: sudo -H pip3 install -qr requirements.txt
+        setup-command: sudo -H pip3 install --ignore-installed -qr requirements.txt
         command: pytest -m task0_2
         timeout: 10
     - name: Task 0.3
@@ -44,7 +44,7 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Task 0.3
-        setup-command: sudo -H pip3 install -qr requirements.txt
+        setup-command: sudo -H pip3 install --ignore-installed -qr requirements.txt
         command: pytest -m task0_3
         timeout: 10
     - name: Task 0.4
@@ -52,7 +52,7 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Task 0.4
-        setup-command: sudo -H pip3 install -qr requirements.txt
+        setup-command: sudo -H pip3 install --ignore-installed -qr requirements.txt
         command: pytest -m task0_4
         timeout: 10
     - name: Autograding Reporter
