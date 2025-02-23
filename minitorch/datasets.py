@@ -139,11 +139,12 @@ def spiral(N):
     Returns:
         Graph: A Graph object containing the generated points and their corresponding labels.
 
-    The function generates two interleaving spirals, each with N/2 points. The points are 
-    calculated using parametric equations for a spiral and then shifted to fit within a 
+    The function generates two interleaving spirals, each with N/2 points. The points are
+    calculated using parametric equations for a spiral and then shifted to fit within a
     unit square. The labels for the points are 0 for the first spiral and 1 for the second spiral.
 
     """
+
     def x(t):
         return t * math.cos(t) / 20.0
 
