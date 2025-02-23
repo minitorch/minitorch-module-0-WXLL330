@@ -100,7 +100,7 @@ def lt(a: float, b: float) -> float:
         float: True if `a` is less than `b`, otherwise False.
 
     """
-    return a < b
+    return 1.0 if a < b else 0.0
 
 
 def eq(a: float, b: float) -> float:
@@ -114,7 +114,7 @@ def eq(a: float, b: float) -> float:
         float: 1.0 if the numbers are equal, 0.0 otherwise.
 
     """
-    return a == b
+    return 1.0 if a == b else 0.0
 
 
 def max(a: float, b: float) -> float:
