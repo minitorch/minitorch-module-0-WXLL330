@@ -39,10 +39,12 @@ def mul(a: float, b: float) -> float:
     """Multiply two floating-point numbers.
 
     Args:
+    ----
         a (float): The first number.
         b (float): The second number.
 
     Returns:
+    -------
         float: The product of the two numbers.
 
     """
@@ -53,9 +55,11 @@ def id(x: float) -> float:
     """Returns the input value unchanged.
 
     Args:
+    ----
         x (float): The input value.
 
     Returns:
+    -------
         float: The same input value.
 
     """
@@ -66,10 +70,12 @@ def add(a: float, b: float) -> float:
     """Adds two floating-point numbers.
 
     Args:
+    ----
         a (float): The first number.
         b (float): The second number.
 
     Returns:
+    -------
         float: The sum of the two numbers.
 
     """
@@ -80,9 +86,11 @@ def neg(x: float) -> float:
     """Returns the negation of the input value.
 
     Args:
+    ----
         x (float): The input value to be negated.
 
     Returns:
+    -------
         float: The negated value of the input.
 
     """
@@ -93,11 +101,13 @@ def lt(a: float, b: float) -> float:
     """Compare two float values and return True if the first value is less than the second value.
 
     Args:
+    ----
         a (float): The first value to compare.
         b (float): The second value to compare.
 
     Returns:
-        float: True if `a` is less than `b`, otherwise False.
+    -------
+        float: 1.0 if `a` is less than `b`, otherwise 0.0.
 
     """
     return 1.0 if a < b else 0.0
@@ -107,10 +117,12 @@ def eq(a: float, b: float) -> float:
     """Compares two floating-point numbers for equality.
 
     Args:
+    ----
         a (float): The first number to compare.
         b (float): The second number to compare.
 
     Returns:
+    -------
         float: 1.0 if the numbers are equal, 0.0 otherwise.
 
     """
@@ -121,10 +133,12 @@ def max(a: float, b: float) -> float:
     """Return the maximum of two numbers.
 
     Args:
+    ----
         a (float): The first number.
         b (float): The second number.
 
     Returns:
+    -------
         float: The maximum of the two numbers.
 
     """
@@ -135,10 +149,12 @@ def is_close(a: float, b: float) -> float:
     """Determines if two floating-point numbers are close to each other within a small tolerance.
 
     Args:
+    ----
         a (float): The first floating-point number.
         b (float): The second floating-point number.
 
     Returns:
+    -------
         float: True if the absolute difference between `a` and `b` is less than 0.01, otherwise False.
 
     """
@@ -153,9 +169,11 @@ def sigmoid(x: float) -> float:
     stable and avoids overflow issues.
 
     Args:
+    ----
         x (float): The input value.
 
     Returns:
+    -------
         float: The sigmoid of the input value.
 
     """
@@ -187,9 +205,11 @@ def log(x: float) -> float:
     """Computes the natural logarithm of a given number.
 
     Args:
+    ----
         x (float): The number to compute the natural logarithm for.
 
     Returns:
+    -------
         float: The natural logarithm of the input number.
 
     """
@@ -200,9 +220,11 @@ def exp(x: float) -> float:
     """Computes the exponential of a given number.
 
     Args:
+    ----
         x (float): The input value.
 
     Returns:
+    -------
         float: The exponential of the input value.
 
     """
@@ -213,10 +235,12 @@ def log_back(x: float, y: float) -> float:
     """Computes the gradient of the logarithm function with respect to its input.
 
     Args:
+    ----
         x (float): The input value to the logarithm function.
         y (float): A second arg.
 
     Returns:
+    -------
         float: The gradient of the logarithm function with respect to x.
 
     """
@@ -253,10 +277,12 @@ def inv_back(x: float, y: float) -> float:
     by the provided gradient `y`.
 
     Args:
+    ----
         x (float): The input value for which the gradient is computed.
         y (float): A second arg.
 
     Returns:
+    -------
         float: The gradient of the inverse function with respect to `x`, scaled by `y`.
 
     """
@@ -312,10 +338,12 @@ def map(fn: Callable[[float], float], ls: Iterable[float]) -> Iterable[float]:
     """Applies a given function to each element in an iterable of floats.
 
     Args:
+    ----
         fn (Callable[[float], float]): A function that takes a float and returns a float.
         ls (Iterable[float]): An iterable of floats to which the function will be applied.
 
     Returns:
+    -------
         Iterable[float]: A new iterable with the function applied to each element.
 
     """
@@ -331,11 +359,13 @@ def zipWith(
     """Applies a binary function to pairs of elements from two input iterables and returns a new iterable with the results.
 
     Args:
+    ----
         fn (Callable[[float, float], float]): A function that takes two float arguments and returns a float.
         ls1 (Iterable[float]): The first iterable of floats.
         ls2 (Iterable[float]): The second iterable of floats.
 
     Returns:
+    -------
         Iterable[float]: A new iterable containing the results of applying the function to corresponding elements of the input iterables.
 
     """
@@ -352,11 +382,13 @@ def reduce(
     so as to reduce the sequence to a single value.
 
     Args:
+    ----
         fn (Callable[[float, float], float]): A binary function that takes two floats and returns a float.
         ls (Iterable[float]): An iterable of floats to be reduced.
         start (float): The initial value to start the reduction.
 
     Returns:
+    -------
         float: The reduced value after applying the binary function cumulatively.
 
     """
@@ -370,9 +402,11 @@ def negList(ls: Iterable[float]) -> Iterable[float]:
     """Applies the neg function to each element in the given iterable.
 
     Args:
+    ----
         ls (Iterable[float]): An iterable of float numbers.
 
     Returns:
+    -------
         Iterable[float]: An iterable where each element is the negation of the corresponding element in the input iterable.
 
     """
@@ -383,10 +417,12 @@ def addLists(ls1: Iterable[float], ls2: Iterable[float]) -> Iterable[float]:
     """Adds corresponding elements of two lists.
 
     Args:
+    ----
         ls1 (Iterable[float]): The first list of floats.
         ls2 (Iterable[float]): The second list of floats.
 
     Returns:
+    -------
         Iterable[float]: A new iterable containing the sums of the corresponding elements of ls1 and ls2.
 
     """
@@ -397,9 +433,11 @@ def sum(ls: Iterable[float]) -> float:
     """Calculate the sum of a list of floating-point numbers.
 
     Args:
+    ----
         ls (Iterable[float]): An iterable containing floating-point numbers to be summed.
 
     Returns:
+    -------
         float: The sum of the numbers in the iterable.
 
     """
@@ -410,9 +448,11 @@ def prod(ls: Iterable[float]) -> float:
     """Calculate the product of all elements in the given iterable.
 
     Args:
+    ----
         ls (Iterable[float]): An iterable of floating-point numbers.
 
     Returns:
+    -------
         float: The product of all elements in the iterable.
 
     """

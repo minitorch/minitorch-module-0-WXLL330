@@ -8,6 +8,6 @@
 * Overview: https://minitorch.github.io/module0/module0/
 
 ![newplot](newplot.png)
-linear.weight_0_0: -3.02  
-linear.weight_0_0: 0.99  
+linear.weight_0_0: -3.02
+linear.weight_0_0: 0.99
 linear.bias_0: 0.74

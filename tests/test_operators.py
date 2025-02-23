@@ -161,7 +161,7 @@ def test_other(x: float, y: float) -> None:
         expected_log_back = y * (1.0 / (x + 1))
         assert log_back(x + 1, y) == pytest.approx(expected_log_back)
 
-    assert lt(x, x) is False
+    assert lt(x, x) == 0.0
 
     if x > 0:
         assert relu_back(x, y) == pytest.approx(y)

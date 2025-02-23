@@ -4,13 +4,15 @@ from dataclasses import dataclass
 from typing import List, Tuple
 
 
-def make_pts(N):
+def make_pts(N: int) -> List[Tuple[float, float]]:
     """Generate a list of N random 2D points.
 
     Args:
+    ----
         N (int): The number of points to generate.
 
     Returns:
+    -------
         list of tuple: A list containing N tuples, each with two random float values representing a 2D point.
 
     """
@@ -29,13 +31,15 @@ class Graph:
     y: List[int]
 
 
-def simple(N):
+def simple(N: int) -> Graph:
     """Generates a simple dataset for binary classification.
 
     Args:
+    ----
         N (int): The number of data points to generate.
 
     Returns:
+    -------
         Graph: A Graph object containing the generated data points and their labels.
 
     """
@@ -47,13 +51,15 @@ def simple(N):
     return Graph(N, X, y)
 
 
-def diag(N):
+def diag(N: int) -> Graph:
     """Generates a dataset of N points and assigns a label based on the sum of the coordinates.
 
     Args:
+    ----
         N (int): The number of points to generate.
 
     Returns:
+    -------
         Graph: A Graph object containing the generated points and their corresponding labels.
 
     """
@@ -65,13 +71,15 @@ def diag(N):
     return Graph(N, X, y)
 
 
-def split(N):
+def split(N: int) -> Graph:
     """Splits the generated points into two classes based on the x_1 coordinate.
 
     Args:
+    ----
         N (int): The number of points to generate.
 
     Returns:
+    -------
         Graph: A Graph object containing the generated points and their corresponding classes.
 
     The function generates N points using the make_pts function. Each point is classified into one of two classes based on the x_1 coordinate:
@@ -87,13 +95,15 @@ def split(N):
     return Graph(N, X, y)
 
 
-def xor(N):
+def xor(N: int) -> Graph:
     """Generates a dataset for the XOR problem.
 
     Args:
+    ----
         N (int): The number of data points to generate.
 
     Returns:
+    -------
         Graph: A graph object containing the generated points and their corresponding XOR labels.
 
     The function generates N points in a 2D space and labels them according to the XOR logic:
@@ -109,13 +119,15 @@ def xor(N):
     return Graph(N, X, y)
 
 
-def circle(N):
+def circle(N: int) -> Graph:
     """Generates a dataset of N points arranged in a circle pattern.
 
     Args:
+    ----
         N (int): The number of points to generate.
 
     Returns:
+    -------
         Graph: A graph object containing the generated points and their labels.
                The labels are 1 if the point lies outside a circle of radius sqrt(0.1)
                centered at (0.5, 0.5), and 0 otherwise.
@@ -130,13 +142,15 @@ def circle(N):
     return Graph(N, X, y)
 
 
-def spiral(N):
+def spiral(N: int) -> Graph:
     """Generates a spiral dataset.
 
     Args:
+    ----
         N (int): The total number of points in the dataset. Must be an even number.
 
     Returns:
+    -------
         Graph: A Graph object containing the generated points and their corresponding labels.
 
     The function generates two interleaving spirals, each with N/2 points. The points are
@@ -145,10 +159,10 @@ def spiral(N):
 
     """
 
-    def x(t):
+    def x(t: float) -> float:
         return t * math.cos(t) / 20.0
 
-    def y(t):
+    def y(t: float) -> float:
         return t * math.sin(t) / 20.0
 
     X = [

@@ -17,8 +17,8 @@ exclude = [
     "**/.*",
     "*chainrule.py*",
 ]
-venvPath = "."
-venv = ".venv"
+venvPath = "/home/ws/.conda/envs"
+venv = "minitorch"
 reportUnknownMemberType = "none"
 reportUnknownParameterType = "none"
 reportUnknownArgumentType = "none"
